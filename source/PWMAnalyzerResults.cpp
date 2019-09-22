@@ -38,7 +38,7 @@ void PWMAnalyzerResults::GenerateBubbleText(U64 frame_index, Channel &channel, D
 
     if (mSettings->mAnalysisType == ANALYSIS_WIDTH) {
         snprintf(number_str, sizeof(number_str), Width(frame) > 9 ? "%.0f" : "%.1f", Width(frame));
-        units = " μS";
+        units = " us";
     } else {
         snprintf(number_str, sizeof(number_str), "%.1f", DutyCycle(frame));
         units = "%";
@@ -96,7 +96,7 @@ void PWMAnalyzerResults::GenerateFrameTabularText(U64 frame_index, DisplayBase d
 
     if (mSettings->mAnalysisType == ANALYSIS_WIDTH) {
         snprintf(number_str, sizeof(number_str), Width(frame) > 9 ? "%.0f" : "%.1f", Width(frame));
-        units = " μS";
+        units = " us";
     } else {
         snprintf(number_str, sizeof(number_str), "%.1f", DutyCycle(frame));
         units = "%";

@@ -19,7 +19,7 @@ PWMAnalyzerSettings::PWMAnalyzerSettings()
     mAnalysisTypeInterface->SetNumber(mAnalysisType);
 
     mMinChangeInterface.reset(new AnalyzerSettingInterfaceInteger());
-    mMinChangeInterface->SetTitleAndTooltip("Min Change(μS or %)",
+    mMinChangeInterface->SetTitleAndTooltip("Min Change(us or %)",
                                            "The minimum amount of value change before recording a frame.");
     mMinChangeInterface->SetMax(10000);
     mMinChangeInterface->SetMin(0);
