@@ -85,6 +85,7 @@ void PWMAnalyzerResults::GenerateExportFile(const char *file, DisplayBase displa
 
 void PWMAnalyzerResults::GenerateFrameTabularText(U64 frame_index, DisplayBase display_base)
 {
+#ifdef SUPPORTS_PROTOCOL_SEARCH
     Frame frame = GetFrame(frame_index);
     ClearTabularText();
 
@@ -102,6 +103,7 @@ void PWMAnalyzerResults::GenerateFrameTabularText(U64 frame_index, DisplayBase d
     }
 
     AddTabularText(number_str, units, delta_str);
+#endif
 }
 
 void PWMAnalyzerResults::FillDelta(U64 frame_index, char *b, size_t len)
